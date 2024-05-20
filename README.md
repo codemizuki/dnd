@@ -1,5 +1,5 @@
 # TwitchPlaysDnD
-Inspired by DougDoug's 'Twitch Plays D&amp;D' 
+Inspired by DougDoug's 'Twitch Plays D&amp;D' and stumpster project, but modifiedy to fit Loretta's stream better
 
 # Setup for player-led game
 
