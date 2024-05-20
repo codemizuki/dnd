@@ -106,3 +106,5 @@ Any chatters in the channel can submit these commands:
     - This command will be used by chat to submit actions to the ChatGPT GM. This starts a poll to vote on the next action and will give a shortcut for other chat members to vote on that action using:
 - !`x`
     - A shortcut for a command will be given (e.g. `!1`, `!2`, etc) and can be used by chat members to vote on the next action
+ 
+- https://github.com/stumpster/TwitchPlaysDnD/tree/main
