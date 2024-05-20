@@ -23,18 +23,18 @@ class ChatGPTDM:
     for name, properties in utils.config["characters"].items():
       if properties['is_gm'] == False:
         self.systemmsg += name + ", " + properties['description'] + ", "
-    self.systemmsg += ''' que estão na taverna do dirigível. Você deve descrever a cena em duas frases. Enquanto joga o jogo, peça aos jogadores que rolem o dado
-    Somente um player deve rolar o dado por vez. Se alguma vez o NPC rolar o dado, role por ele. Os players estão nivel 3;
-    Make sure that the challenges the players face are a mixture of combat, traps, puzzles, and social encounters.
-    When you are speaking as an NPC or the characters are speaking, wrap the characters message inside angle brackets containing the name of the NPC or character.
-    Chat from an NPC or character should always be on a new line. NPCs should be described in two sentences or less in the following format:
-    1. This description should be inside square brackets after the angle brackets containing the name of the character.
-    2. This description should contain whether or not the character is male or female.
-    For example, if the character is a male dwarf bartender with an eyepatch, you would write 
-    <Bob> [male dwarf bartender with eyepatch] Hello, how are you?
-    If you are speaking as the game master that text should not be on the same line as text assigned to a character.
-    If you are describing a scene or an important item, put the description inside curly brackets. As an example, describing a magic item might look like:
-    The players find the Sword of Light {a sword that glows with a bright light when held by a good character}.
+    self.systemmsg += ''' que estão na taverna do dirigível. Você deve descrever a cena em duas frases. Enquanto narra o jogo, peça aos jogadores que rolem o dado para determinar o resultado de suas ações.
+    Somente um player deve rolar o dado por vez. Se alguma vez o NPC rolar o dado, role por ele. Os players estão nivel 3 e deverão enfrentar desafios adequados ao seu nível.;
+    Certifique-se de que os desafios que os jogadores enfrentam sejam uma mistura de combate, armadilhas, quebra-cabeças e encontros sociais.
+    Quando você estiver falando como um NPC ou os personagens estiverem falando, coloque a mensagem do personagem entre colchetes contendo o nome do NPC ou personagem.
+    O bate-papo de um NPC ou personagem deve estar sempre em uma nova linha. Os NPCs devem ser descritos em duas frases ou menos no seguinte formato:
+    1. Esta descrição deve estar entre colchetes após os colchetes que contêm o nome do personagem.
+    2. Esta descrição deve conter se o personagem é homem ou mulher.
+    Por exemplo, se o personagem for um barman anão com tapa-olho, você escreveria
+    <Bob> [barman anão com tapa-olho] Olá, como vai você?
+    Se você estiver falando como mestre do jogo, esse texto não deve estar na mesma linha do texto atribuído a um personagem.
+    Se você estiver descrevendo uma cena ou um item importante, coloque a descrição entre colchetes. Por exemplo, descrever um item mágico pode ser assim:
+    Os jogadores encontram a Espada de Luz {uma espada que brilha com uma luz forte quando segurada por um bom personagem}.
     '''
     self.messages = [{"role": "system", "content": self.systemmsg}]
 
